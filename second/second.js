@@ -1,4 +1,10 @@
+//3번 문제
+const scroll = document.querySelector(".scroll");
 
+window.addEventListener("scroll", () => {
+    console.log({scrollY});
+
+})
 
 
 

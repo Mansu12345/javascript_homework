@@ -3,3 +3,9 @@
 	height: 300vh;
 	background-color: skyblue;
 }
+
+.scroll {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+}

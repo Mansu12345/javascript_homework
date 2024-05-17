@@ -1,7 +1,9 @@
 //1번 문제 
 document.querySelector("#container").addEventListener("click", function(event)  {
-    if ( event.target === document.querySelector(".box")) {
-       document.querySelector(".box").classList.add("clicked");
+
+       if (event.target.classList.contains("box")) {
+        event.target.classList.add("clicked");
+     
      
     }
 })
@@ -17,7 +19,7 @@ console.log(result);
 
 
 
-/*
+/* 트러블 발생했던 코드
  if ( event.currentTarget === event.target) {
         document.querySelector(".box").classList.add("clicked");
         event.stopPropagation();
