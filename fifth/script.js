@@ -99,3 +99,43 @@ const home = user.주소;
 console.log(call);
 console.log(old);
 console.log(home);
+
+//8번 문제
+
+localStorage.setItem("user", JSON.stringify(user))
+
+const searchItem = localStorage.getItem("user")
+if (searchItem) {
+    const search = JSON.parse(searchItem)
+    console.log(search)
+}
+
+if (searchItem) { 
+    const search = JSON.parse(searchItem)
+    search.나이 = 30
+    localStorage.setItem("user", JSON.stringify(search))
+}
+
+localStorage.removeItem("user")
+
+const deleteItem = localStorage.getItem("user")
+console.log(deleteItem)
+
+
+///5-1번 문제
+const options = {
+    method: 'GET',
+    }
+
+function url() {
+    const url = 'https://jsonplaceholder.typicode.com/posts'
+
+
+
+fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+
+}
+
+console.log(url)
